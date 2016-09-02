@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <title>Aldwyn Studio</title>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' type='text/css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Pacifico' type='text/css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Fjalla+One' type='text/css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Just+Another+Hand' type='text/css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Patua+One' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/material-design-lite/material.min.css"> -->
+</head>
+
+<body>
+    <div id="main" class="container">
+        <img id="avatar" src="https://avatars0.githubusercontent.com/u/7032430?v=3&s=460" alt="">
+        <h1 class="author">
+            <span></span>
+        </h1>
+        <div class="author-subheader">
+            <span></span>
+        </div>
+        <div id="contact-links">
+            <a href="https://github.com/aldwyn" title=""><span class="fa fa-github-square"></span></a>
+            &bull;
+            <a href="https://www.linkedin.com/in/aldwyn101" title=""><span class="fa fa-linkedin-square"></span></a>
+            &bull;
+            <a href="https://bitbucket.org/aldwyn" title=""><span class="fa fa-bitbucket-square"></span></a>
+            &bull;
+            <a href="https://plus.google.com/110487100545578063595" title=""><span class="fa fa-google-plus-square"></span></a>
+            &bull;
+            <a href="https://twitter.com/ThisTwinkAldwyn" title=""><span class="fa fa-twitter-square"></span></a>
+            &bull;
+            <a href="https://www.facebook.com/aldwyn101" title=""><span class="fa fa-facebook-official"></span></a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://raw.githubusercontent.com/mattboldt/typed.js/master/js/typed.js"></script>
+    <script>
+        $(function(){
+            $(".author span").typed({
+                typeSpeed: 20,
+                backDelay: 500,
+                strings: ["Hello, I'm <span style='color:#337AB7;'>Aldwyn</span>."],
+                onStringTyped: function() {
+                    $(".author-subheader span").typed({
+                        typeSpeed: 20,
+                        startDelay: 500,
+                        backDelay: 500,
+                        strings: [
+                            "I speak JavaScript.",
+                            "I speak Python.",
+                            "I speak Java.",
+                            "I speak PHP.",
+                            "I speak C#.",
+                            "Freelancing is my routine.",
+                            "I do cool things on the Internet.",
+                            "Call me Sir if you need."
+                        ],
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+<style type="text/css">
+body {
+    background: url(/background.jpg) center / cover;
+}
+#main {
+    position: relative;
+    margin-top: 150px;
+    text-align: center;
+}
+.author {
+    font-family: 'Patua One';
+    font-size: 4em;
+}
+.author-subheader {
+    font-family: 'Fjalla One';
+    font-size: 2em;
+}
+#contact-links {
+    font-size: 3em;
+}
+#contact-links a {
+    color: #333;
+}
+#avatar {
+    border-radius: 100%;
+    border-width: medium;
+    border-style: dashed;
+    box-shadow: 0px 0px 10px #000;
+    width: 200px;
+}
+</style>
+<style type="text/css">
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+</style>
+
+</html>
