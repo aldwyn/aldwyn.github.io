@@ -1,124 +1,919 @@
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Aldwyn Studio</title>
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' type='text/css'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Pacifico' type='text/css'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Fjalla+One' type='text/css'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Just+Another+Hand' type='text/css'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Patua+One' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="/material-design-lite/material.min.css"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aldwyn Cabarrubias is available for work</title>
+  <meta name="description" content="Senior Solutions Architect and DevOps leader with 10+ years across cloud infrastructure, data platform engineering, FinOps, and enterprise automation.">
+  <meta property="og:title" content="Aldwyn Cabarrubias is available for work">
+  <meta property="og:description" content="Senior Solutions Architect and DevOps leader with 10+ years across cloud infrastructure, data platform engineering, and enterprise automation.">
+  <meta property="og:url" content="https://aldwyn.github.io">
+  <meta property="og:type" content="website">
+
+  <!-- Prevent search engine indexing and AI bot crawling -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="google-extended" content="noindex, nofollow">
+
+  <!-- Theme initialization to prevent flash -->
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "auto";
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root, html {
+      color-scheme: light;
+      --colour-text: #333333;
+      --colour-inactive: #8e8e93;
+      --colour-muted: #636366;
+      --colour-bg: #ffffff;
+      --colour-rule: #f2f2f7;
+      --colour-rule-strong: #e5e5ea;
+      --colour-blockquote-bg: #f4f4f5;
+      --colour-code-bg: #27272a;
+      --colour-code-text: #e4e4e7;
+      --colour-tag-bg: #f4f4f5;
+      --colour-tag-border: #e4e4e7;
+      --colour-tag-text: #52525b;
+      --colour-row-hover: #fafafa;
+      --colour-accent: #0969da;
+      --article-width: 44rem;
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --colour-text: #d4d4d8;
+      --colour-inactive: #71717a;
+      --colour-muted: #a1a1aa;
+      --colour-bg: #16181c;
+      --colour-rule: #27272a;
+      --colour-rule-strong: #33373e;
+      --colour-blockquote-bg: #202328;
+      --colour-code-bg: #0e0f12;
+      --colour-code-text: #d4d4d8;
+      --colour-tag-bg: #1f2329;
+      --colour-tag-border: #2e333d;
+      --colour-tag-text: #a1a1aa;
+      --colour-row-hover: #1e2127;
+      --colour-accent: #58a6ff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html:not([data-theme="light"]):not([data-theme="dark"]),
+      html[data-theme="auto"] {
+        color-scheme: dark;
+        --colour-text: #d4d4d8;
+        --colour-inactive: #71717a;
+        --colour-muted: #a1a1aa;
+        --colour-bg: #16181c;
+        --colour-rule: #27272a;
+        --colour-rule-strong: #33373e;
+        --colour-blockquote-bg: #202328;
+        --colour-code-bg: #0e0f12;
+        --colour-code-text: #d4d4d8;
+        --colour-tag-bg: #1f2329;
+        --colour-tag-border: #2e333d;
+        --colour-tag-text: #a1a1aa;
+        --colour-row-hover: #1e2127;
+        --colour-accent: #58a6ff;
+      }
+    }
+
+    body {
+      color: var(--colour-text);
+      background-color: var(--colour-bg);
+      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    a {
+      color: var(--colour-text);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    a:hover {
+      opacity: 0.8;
+    }
+
+    .editorial-quote {
+      background-color: var(--colour-blockquote-bg);
+      border-left: 0.75rem solid var(--colour-inactive);
+      padding: 1.25rem 1.75rem 1.25rem 1.5rem;
+      border-radius: 0.75rem;
+      font-style: italic;
+      margin: 2.5rem 0;
+      max-width: var(--article-width);
+    }
+
+    .timeline-rail {
+      position: relative;
+    }
+    .timeline-rail::before {
+      content: '';
+      position: absolute;
+      top: 0.75rem;
+      bottom: 1.5rem;
+      left: -1.75rem;
+      width: 2px;
+      background-color: var(--colour-rule-strong);
+    }
+
+    .timeline-node {
+      position: relative;
+    }
+    .timeline-node::before {
+      content: '';
+      position: absolute;
+      top: 0.6rem;
+      left: -1.75rem;
+      transform: translateX(-50%);
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 9999px;
+      background-color: var(--colour-bg);
+      border: 2px solid var(--colour-inactive);
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .timeline-node:hover::before {
+      border-color: var(--colour-text);
+      background-color: var(--colour-text);
+    }
+
+    .tag-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.125rem 0.5rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.75rem;
+      background-color: var(--colour-tag-bg);
+      border: 1px solid var(--colour-tag-border);
+      color: var(--colour-tag-text);
+      border-radius: 0.25rem;
+      margin-right: 0.35rem;
+      margin-bottom: 0.35rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.95rem;
+    }
+    table th {
+      text-align: left;
+      font-weight: 600;
+      padding: 0.6rem 0.75rem;
+      border-bottom: 2px solid var(--colour-text);
+    }
+    table td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--colour-rule-strong);
+      vertical-align: top;
+    }
+    table tr:hover td {
+      background-color: var(--colour-row-hover);
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.35rem;
+      color: var(--colour-inactive);
+      line-height: 0;
+      opacity: 0.7;
+      transition: opacity 0.15s ease, color 0.15s ease;
+    }
+    .theme-toggle:hover {
+      opacity: 1;
+      color: var(--colour-text);
+    }
+    .theme-toggle svg {
+      width: 1.15rem;
+      height: 1.15rem;
+      display: block;
+    }
+  </style>
 </head>
+<body class="antialiased min-h-screen">
+  <div class="max-w-[50rem] mx-auto px-5 sm:px-8 py-10 sm:py-16">
 
-<body>
-    <div id="main" class="container">
-        <img id="avatar" src="https://avatars0.githubusercontent.com/u/7032430?v=3&s=460" alt="">
-        <h1 class="author">
-            <span></span>
-        </h1>
-        <div class="author-subheader">
-            <span></span>
+    <header class="site-header mb-12">
+      <nav class="site-nav">
+        <div class="flex items-center justify-between">
+          <h1 class="text-4xl sm:text-5xl font-normal tracking-tight m-0">
+            <a class="logo text-[var(--colour-text)] hover:no-underline" href="/">Aldwyn Cabarrubias</a>
+          </h1>
+          <div class="hidden sm:block">
+            <span class="inline-flex items-center text-xs tracking-wider uppercase font-mono px-2.5 py-1 rounded bg-[var(--colour-tag-bg)] border border-[var(--colour-tag-border)] text-[var(--colour-muted)]">
+              Cebu City, PH &bull; Remote
+            </span>
+          </div>
         </div>
-        <div id="contact-links">
-            <a href="https://github.com/aldwyn" title=""><span class="fa fa-github-square"></span></a>
-            &bull;
-            <a href="https://www.linkedin.com/in/aldwyn101" title=""><span class="fa fa-linkedin-square"></span></a>
-            &bull;
-            <a href="https://bitbucket.org/aldwyn" title=""><span class="fa fa-bitbucket-square"></span></a>
-            &bull;
-            <a href="https://plus.google.com/110487100545578063595" title=""><span class="fa fa-google-plus-square"></span></a>
-            &bull;
-            <a href="https://twitter.com/ThisTwinkAldwyn" title=""><span class="fa fa-twitter-square"></span></a>
-            &bull;
-            <a href="https://www.facebook.com/aldwyn101" title=""><span class="fa fa-facebook-official"></span></a>
+
+        <ul class="main-menu flex flex-wrap items-center gap-x-5 gap-y-1 text-2xl sm:text-3xl mt-2 mb-1 list-none p-0">
+          <li class="active font-medium"><a href="/" class="text-[var(--colour-text)] underline decoration-2">is</a></li>
+          <li><a href="#timeline" class="text-[var(--colour-inactive)] hover:text-[var(--colour-text)] hover:underline transition-colors">timeline</a></li>
+          <li><a href="#highlights" class="text-[var(--colour-inactive)] hover:text-[var(--colour-text)] hover:underline transition-colors">highlights</a></li>
+          <li><a href="#certifications" class="text-[var(--colour-inactive)] hover:text-[var(--colour-text)] hover:underline transition-colors">certifications</a></li>
+          <li><a href="#stack" class="text-[var(--colour-inactive)] hover:text-[var(--colour-text)] hover:underline transition-colors">stack</a></li>
+          <li><a href="#contact" class="text-[var(--colour-inactive)] hover:text-[var(--colour-text)] hover:underline transition-colors">contact</a></li>
+        </ul>
+
+        <h2 class="text-2xl sm:text-3xl font-normal text-[var(--colour-text)] mt-1 mb-0">
+          available for work
+        </h2>
+      </nav>
+    </header>
+
+    <main class="content">
+      <article>
+        <!-- EDITORIAL CALLOUT QUOTE -->
+        <blockquote class="editorial-quote">
+          <p class="m-0 text-lg sm:text-xl leading-relaxed">
+            <em>I have capacity right now</em>, as of September 2026. I’m looking for two things: 
+            <em>cloud infrastructure &amp; FinOps consulting</em>, and <em>senior or staff DevOps / data platform roles</em>.
+          </p>
+        </blockquote>
+
+        <!-- INTRODUCTORY NARRATIVE -->
+        <div class="space-y-5 text-base sm:text-lg leading-relaxed max-w-[var(--article-width)]">
+          <p>
+            Ten years in, what I do is consistent. I build, orchestrate, and harden production cloud infrastructure,
+            and I’m usually the engineer who bridges the gap between software teams, modern data platforms, and cost reality:
+            the Kubernetes clusters, the Infrastructure as Code, the automated CI/CD and CVE gates, the observability telemetry,
+            and the orchestrators that make distributed systems run without waking people up.
+          </p>
+          <p>
+            I have cut cloud TCO by up to <strong>80%</strong> for enterprise and venture-backed clients across the US and APAC,
+            migrated complex multi-tenant data pipelines to modern orchestrators (like Airflow 3.3 and uv), and hardened
+            isolated, air-gapped financial and robotics environments under strict compliance regimes.
+          </p>
+          <p class="text-sm font-mono text-[var(--colour-muted)] pt-1">
+            AWS Certified GenAI Developer Pro &bull; Solutions Architect Pro &bull; DevOps Engineer Pro &bull; Prior CKA &bull; Terraform Assoc
+          </p>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
-    <script>
-        $(function(){
-            $(".author span").typed({
-                typeSpeed: 20,
-                backDelay: 500,
-                strings: ["Hello, I'm <span style='color:#337AB7;'>Aldwyn</span>."],
-                onStringTyped: function() {
-                    $(".author-subheader span").typed({
-                        typeSpeed: 20,
-                        startDelay: 500,
-                        backDelay: 500,
-                        strings: [
-                            "I speak JavaScript.",
-                            "I speak Python.",
-                            "I speak Java.",
-                            "I speak PHP.",
-                            "I speak C#.",
-                            "Freelancing is my routine.",
-                            "I do cool things on the Internet.",
-                            "Call me Sir if you need."
-                        ],
-                    });
-                }
-            });
+
+        <!-- SELECTED ARCHITECTURAL CASE STUDIES (WHAT THAT LOOKS LIKE) -->
+        <section id="highlights" class="mt-16 pt-8 border-t border-[var(--colour-rule)]">
+          <h3 class="text-2xl sm:text-3xl font-normal text-[var(--colour-text)] mb-6">What that looks like</h3>
+          
+          <div class="space-y-8 max-w-[var(--article-width)]">
+            <p>
+              Three examples, picked because they illustrate three completely different axes of cloud engineering:
+              global ecommerce enterprise integration, multi-tenant next-gen data orchestration, and aggressive FinOps cost reduction.
+            </p>
+
+            <!-- CASE 1: BIFROST ERP -->
+            <div class="pl-4 sm:pl-6 border-l-2 border-[var(--colour-rule-strong)]">
+              <h4 class="text-xl font-semibold mb-2">1. The Bifrost ERP Acquisition (Samsung eCommerce)</h4>
+              <p class="mb-3 text-[var(--colour-muted)]">
+                At Accenture, I led the technical migration and dependency modernization of <em>Bifrost ERP</em>—the multi-tenant
+                Python-based integration layer powering Samsung eCommerce across international regions—acquired from a US-based outsourcing vendor.
+              </p>
+              <p class="mb-3">
+                We remediated application-level CVEs, dismantled fragile legacy LambCI setups in favor of standardized GitHub Actions pipelines,
+                and built Jenkins automated provisioning for SAP Hybris across 30 enterprise servers—cutting manual operator toil by <strong>90%</strong>.
+                As a core DevSecOps engineer for a high-value Diamond Client, I ran continuous vulnerability remediation across global subsidiaries and
+                resolved critical Priority-1 integration incidents to protect revenue-bearing customer checkout flows.
+              </p>
+              <div class="mt-3">
+                <span class="tag-badge">Python</span>
+                <span class="tag-badge">AWS</span>
+                <span class="tag-badge">GitHub Actions</span>
+                <span class="tag-badge">SAP Hybris</span>
+                <span class="tag-badge">DevSecOps</span>
+                <span class="tag-badge">P1 Incident Response</span>
+              </div>
+            </div>
+
+            <!-- CASE 2: WOVEN BY TOYOTA -->
+            <div class="pl-4 sm:pl-6 border-l-2 border-[var(--colour-rule-strong)]">
+              <h4 class="text-xl font-semibold mb-2">2. Next-Gen Airflow 3.3 &amp; Air-Gapped K8s (Woven by Toyota)</h4>
+              <p class="mb-3">
+                At Woven by Toyota, I architected and executed the transition from Apache Airflow 2.10 to <strong>Airflow 3.3</strong>,
+                leveraging the native Git DAG Bundles feature to cleanly isolate multi-tenant DAG repositories across disparate GitHub codebases
+                while sharing unified underlying compute infrastructure.
+              </p>
+              <p class="mb-3">
+                I engineered end-to-end Terraform configurations codifying Fivetran, dbt, Snowflake, and GitHub infrastructure into versioned code.
+                To accelerate container builds and ensure strict reproducibility, I migrated package management from legacy <code>pipenv</code> to <code>uv</code>.
+                In parallel, I deployed standalone Airflow and OpenMetadata Helm releases into a fully restricted, Internet Gateway-less (air-gapped)
+                Kubernetes cluster in the Tokyo region, securing 30 automated pipelines with OPA Gatekeeper security policies.
+              </p>
+              <div class="mt-3">
+                <span class="tag-badge">Airflow 3.3</span>
+                <span class="tag-badge">Git DAG Bundles</span>
+                <span class="tag-badge">Terraform</span>
+                <span class="tag-badge">uv</span>
+                <span class="tag-badge">Air-Gapped EKS</span>
+                <span class="tag-badge">Gatekeeper</span>
+                <span class="tag-badge">Snowflake</span>
+              </div>
+            </div>
+
+            <!-- CASE 3: FINOPS REDUCTION -->
+            <div class="pl-4 sm:pl-6 border-l-2 border-[var(--colour-rule-strong)]">
+              <h4 class="text-xl font-semibold mb-2">3. FinOps Optimization &amp; 80% Cost Reduction (North Labs)</h4>
+              <p class="mb-3">
+                Reliability and elasticity should not come at runaway cost. For Larky, I re-architected bloated, legacy ECS clusters
+                into dynamically-mapped AWS Fargate workloads via Terraform, eliminated hardcoded secrets, fixed misconfigured load balancers,
+                and resized underutilized Elasticsearch clusters—slashing the client’s monthly AWS bill by <strong>80%</strong>.
+              </p>
+              <p class="mb-3">
+                For Lineup.ai (Westfield Innovations / 1848 Ventures), I built an automated dataflow deployment pipeline using Prefect (v1&rarr;v2),
+                GitHub Actions, and EKS, pairing Karpenter dynamic autoscaling with Dask Distributed to shrink infrastructure TCO by <strong>60%</strong>.
+              </p>
+              <div class="mt-3">
+                <span class="tag-badge">AWS Fargate</span>
+                <span class="tag-badge">Terraform</span>
+                <span class="tag-badge">Karpenter</span>
+                <span class="tag-badge">Prefect</span>
+                <span class="tag-badge">FinOps (-80%)</span>
+                <span class="tag-badge">Well-Architected</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CAREER TIMELINE -->
+        <section id="timeline" class="mt-16 pt-8 border-t border-[var(--colour-rule)]">
+          <div class="flex items-baseline justify-between mb-8">
+            <h3 class="text-2xl sm:text-3xl font-normal text-[var(--colour-text)] m-0">Engineering Timeline</h3>
+            <span class="text-sm font-mono text-[var(--colour-muted)]">2011 &mdash; 2026</span>
+          </div>
+
+          <p class="mb-10 text-[var(--colour-muted)] max-w-[var(--article-width)]">
+            A chronological record of engineering engagements, infrastructure milestones, and platform ownership over the last 10+ years.
+          </p>
+
+          <div class="timeline-rail ml-6 sm:ml-8 space-y-12">
+
+            <!-- 1. WOVEN BY TOYOTA -->
+            <div class="timeline-node pl-4 sm:pl-6">
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                <h4 class="text-xl font-semibold text-[var(--colour-text)] m-0">
+                  Data DevOps Engineer <span class="text-base font-normal text-[var(--colour-muted)]">(Contract)</span>
+                </h4>
+                <time class="font-mono text-xs sm:text-sm text-[var(--colour-muted)] mt-1 sm:mt-0">
+                  May 2024 – Present &amp; Sep – Dec 2023
+                </time>
+              </div>
+              <div class="text-base font-medium text-[var(--colour-inactive)] mb-3">
+                Woven by Toyota, Inc. &bull; Tokyo, JP &amp; Remote
+              </div>
+              <div class="text-base leading-relaxed space-y-2.5 max-w-[var(--article-width)]">
+                <p>
+                  <strong>Next-Gen Orchestration (2024–2026):</strong> Architected and executed migration from Apache Airflow 2.10 to Airflow 3.3,
+                  using the native Git DAG Bundles feature to isolate multi-tenant DAG folders across independent GitHub repositories within unified shared infrastructure.
+                </p>
+                <p>
+                  <strong>Data Stack Codification (2024–2026):</strong> Engineered comprehensive Terraform configurations to manage and version infrastructure
+                  for Fivetran, dbt, Snowflake, and GitHub assets, codifying the enterprise data ecosystem end-to-end.
+                </p>
+                <p>
+                  <strong>Dependency &amp; Build Optimization (2024–2026):</strong> Cut container build times and improved environment reproducibility
+                  by migrating the core Python data platform’s package management from legacy <code>pipenv</code> to <code>uv</code>.
+                </p>
+                <p>
+                  <strong>Air-Gapped Infrastructure (2023):</strong> Deployed a production-grade, standalone Apache Airflow Helm release into a restricted,
+                  Internet Gateway-less Kubernetes cluster in the Tokyo region, orchestrating 30 automated data pipelines across 5 repositories;
+                  paired it with an OpenMetadata Helm release enforced by Gatekeeper security and cost-optimization policies.
+                </p>
+              </div>
+              <div class="mt-3.5">
+                <span class="tag-badge">Airflow 3.3</span>
+                <span class="tag-badge">Git DAG Bundles</span>
+                <span class="tag-badge">Terraform</span>
+                <span class="tag-badge">uv</span>
+                <span class="tag-badge">Kubernetes (EKS)</span>
+                <span class="tag-badge">OpenMetadata</span>
+                <span class="tag-badge">Gatekeeper</span>
+                <span class="tag-badge">Snowflake</span>
+              </div>
+            </div>
+
+            <!-- 2. ING HUBS PHILIPPINES -->
+            <div class="timeline-node pl-4 sm:pl-6">
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                <h4 class="text-xl font-semibold text-[var(--colour-text)] m-0">
+                  Senior Operations Engineer
+                </h4>
+                <time class="font-mono text-xs sm:text-sm text-[var(--colour-muted)] mt-1 sm:mt-0">
+                  Aug 2024 – Dec 2025
+                </time>
+              </div>
+              <div class="text-base font-medium text-[var(--colour-inactive)] mb-3">
+                ING Hubs Philippines &bull; Financial Business Systems
+              </div>
+              <div class="text-base leading-relaxed space-y-2.5 max-w-[var(--article-width)]">
+                <p>
+                  <strong>Observability Strategy:</strong> Spearheaded a cross-functional engineering team to advance financial systems to Observability Maturity Assessment (OMA) Level 2 (from Level 0) across critical, high-throughput banking platforms.
+                </p>
+                <p>
+                  <strong>Telemetry &amp; Dashboarding:</strong> Overhauled non-production and production Reliability Toolkit v2 (RTK) dashboards for DocumentumFM, adding custom Prometheus metrics and Grafana widgets that reduced incident resolution time by <strong>20%</strong> and eliminated repetitive operational toil.
+                </p>
+                <p>
+                  <strong>Vulnerability Management:</strong> Monitored TSCM security controls and proactively remediated open CVEs across 7 enterprise Documentum applications deployed on virtual servers in the ING Private Cloud (IPC).
+                </p>
+              </div>
+              <div class="mt-3.5">
+                <span class="tag-badge">Prometheus</span>
+                <span class="tag-badge">Grafana</span>
+                <span class="tag-badge">RTK v2</span>
+                <span class="tag-badge">Observability (OMA L2)</span>
+                <span class="tag-badge">TSCM Controls</span>
+                <span class="tag-badge">Private Cloud (IPC)</span>
+              </div>
+            </div>
+
+            <!-- 3. PANTOMATH -->
+            <div class="timeline-node pl-4 sm:pl-6">
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                <h4 class="text-xl font-semibold text-[var(--colour-text)] m-0">
+                  Senior Integration Engineer
+                </h4>
+                <time class="font-mono text-xs sm:text-sm text-[var(--colour-muted)] mt-1 sm:mt-0">
+                  Jul 2023 – Feb 2024
+                </time>
+              </div>
+              <div class="text-base font-medium text-[var(--colour-inactive)] mb-3">
+                Pantomath &bull; Pipeline Observability Platform
+              </div>
+              <div class="text-base leading-relaxed space-y-2.5 max-w-[var(--article-width)]">
+                <p>
+                  <strong>Observability Platform Engineering:</strong> Improved automated metadata and node-event extraction for Pantomath’s ExpressJS-based data pipeline observability and traceability platform, expanding native lineage and runtime tracing support for dbt Cloud and dbt Core.
+                </p>
+              </div>
+              <div class="mt-3.5">
+                <span class="tag-badge">TypeScript</span>
+                <span class="tag-badge">ExpressJS</span>
+                <span class="tag-badge">dbt Cloud / Core</span>
+                <span class="tag-badge">Data Lineage</span>
+                <span class="tag-badge">Observability</span>
+              </div>
+            </div>
+
+            <!-- 4. ATLAN TECHNOLOGIES -->
+            <div class="timeline-node pl-4 sm:pl-6">
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                <h4 class="text-xl font-semibold text-[var(--colour-text)] m-0">
+                  Senior Backend Engineer <span class="text-base font-normal text-[var(--colour-muted)]">(Contract)</span>
+                </h4>
+                <time class="font-mono text-xs sm:text-sm text-[var(--colour-muted)] mt-1 sm:mt-0">
+                  Sep – Dec 2022
+                </time>
+              </div>
+              <div class="text-base font-medium text-[var(--colour-inactive)] mb-3">
+                Atlan Technologies Pvt Ltd &bull; Active Metadata Platform
+              </div>
+              <div class="text-base leading-relaxed space-y-2.5 max-w-[var(--article-width)]">
+                <p>
+                  <strong>Data Connectors Optimization:</strong> Optimized Argo Workflow templates to significantly improve throughput and metadata sync reliability across enterprise connector packages (Salesforce, Metabase, dbt Cloud/Core, SQL Server, and Mixpanel).
+                </p>
+                <p>
+                  <strong>SLA Resolution:</strong> Diagnosed and resolved business-critical customer support tickets tracked in Linear, eliminating legacy connector bottlenecks to meet stringent SLA targets.
+                </p>
+              </div>
+              <div class="mt-3.5">
+                <span class="tag-badge">Argo Workflows</span>
+                <span class="tag-badge">Kubernetes</span>
+                <span class="tag-badge">Metadata Crawlers</span>
+                <span class="tag-badge">Python</span>
+                <span class="tag-badge">Linear</span>
+              </div>
+            </div>
+
+            <!-- 5. NORTH LABS -->
+            <div class="timeline-node pl-4 sm:pl-6">
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                <h4 class="text-xl font-semibold text-[var(--colour-text)] m-0">
+                  Senior Solutions Engineer
+                </h4>
+                <time class="font-mono text-xs sm:text-sm text-[var(--colour-muted)] mt-1 sm:mt-0">
+                  Mar 2021 – Jun 2023
+                </time>
+              </div>
+              <div class="text-base font-medium text-[var(--colour-inactive)] mb-3">
+                North Labs LLC &bull; Cloud Consulting &amp; Modern Data Stacks
+              </div>
+              <div class="text-base leading-relaxed space-y-2.5 max-w-[var(--article-width)]">
+                <p>
+                  <strong>FinOps Optimization &mdash; &ldquo;Larky&rdquo; Infrastructure Revamp:</strong> Re-architected legacy ECS clusters into dynamically-mapped AWS Fargate workloads via Terraform, eliminated hardcoded secrets, and corrected misconfigured load balancers and underutilized Elasticsearch domains &mdash; cutting client cloud spend by <strong>80%</strong>.
+                </p>
+                <p>
+                  <strong>Cost Engineering &mdash; &ldquo;Lineup.ai&rdquo; (Westfield Innovations / 1848 Ventures):</strong> Built an automated, dataflow-centric deployment pipeline using Prefect (v1&rarr;v2), GitHub Actions, and EKS; leveraged Karpenter and Dask Distributed for elastic autoscaling, reducing infrastructure TCO by <strong>60%</strong>.
+                </p>
+                <p>
+                  <strong>Security &amp; CI/CD Baselines:</strong> Hardened multi-account AWS environments with secure serverless CI/CD pipelines embedding automated CVE scanners, linters, and foundational security baselines aligned with the AWS Well-Architected Framework.
+                </p>
+              </div>
+              <div class="mt-3.5">
+                <span class="tag-badge">AWS Fargate</span>
+                <span class="tag-badge">Terraform</span>
+                <span class="tag-badge">Karpenter</span>
+                <span class="tag-badge">EKS</span>
+                <span class="tag-badge">Prefect</span>
+                <span class="tag-badge">Dask</span>
+                <span class="tag-badge">FinOps</span>
+              </div>
+            </div>
+
+            <!-- 6. ACCENTURE -->
+            <div class="timeline-node pl-4 sm:pl-6">
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                <h4 class="text-xl font-semibold text-[var(--colour-text)] m-0">
+                  Advanced App Engineering Specialist / DevSecOps
+                </h4>
+                <time class="font-mono text-xs sm:text-sm text-[var(--colour-muted)] mt-1 sm:mt-0">
+                  Aug 2017 – Mar 2021
+                </time>
+              </div>
+              <div class="text-base font-medium text-[var(--colour-inactive)] mb-3">
+                Accenture, Inc. &bull; Enterprise Cloud &amp; DevSecOps
+              </div>
+              <div class="text-base leading-relaxed space-y-2.5 max-w-[var(--article-width)]">
+                <p>
+                  <strong>Infrastructure Acquisition &mdash; Bifrost ERP (Samsung eCommerce):</strong> Led the technical migration and dependency upgrade of a multi-tenant Python-based ERP system from a US-based outsourcing vendor in Greenville, South Carolina; remediated application-level CVEs and replaced legacy LambCI with GitHub Actions.
+                </p>
+                <p>
+                  <strong>DevSecOps Engineering:</strong> Embedded as core DevSecOps engineer for a high-value &ldquo;Diamond Client,&rdquo; running bimonthly AWS vulnerability remediation and cloud security posture improvements across global teams.
+                </p>
+                <p>
+                  <strong>Support Automation (Samsung eCommerce, EU/CA/RU/APAC/MENA):</strong> Built Jenkins automation for SAP Hybris account provisioning across 30 servers, improving operational productivity by <strong>90%</strong> and eliminating manual server access.
+                </p>
+                <p>
+                  <strong>Incident Response:</strong> Partnered with regional subsidiaries and third-party providers on ERP integrations, contributing to code reviews and resolving critical Priority-1 incidents.
+                </p>
+              </div>
+              <div class="mt-3.5">
+                <span class="tag-badge">Python</span>
+                <span class="tag-badge">AWS</span>
+                <span class="tag-badge">DevSecOps</span>
+                <span class="tag-badge">Jenkins</span>
+                <span class="tag-badge">GitHub Actions</span>
+                <span class="tag-badge">SAP Hybris</span>
+                <span class="tag-badge">CVE Hardening</span>
+              </div>
+            </div>
+
+            <!-- 7. COLLABSPOT -->
+            <div class="timeline-node pl-4 sm:pl-6">
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                <h4 class="text-xl font-semibold text-[var(--colour-text)] m-0">
+                  Junior Python Engineer
+                </h4>
+                <time class="font-mono text-xs sm:text-sm text-[var(--colour-muted)] mt-1 sm:mt-0">
+                  Aug 2016 – Mar 2017
+                </time>
+              </div>
+              <div class="text-base font-medium text-[var(--colour-inactive)] mb-3">
+                Collabspot Pte Ltd
+              </div>
+              <div class="text-base leading-relaxed space-y-2.5 max-w-[var(--article-width)]">
+                <p>
+                  Built Django/Celery cron tasks to sync CRM data from G Suite and Office 365 into SugarCRM and Dynamics 365, automating push notifications for 1,000+ active subscribers.
+                </p>
+                <p>
+                  Engineered automated detection of HTML email signatures to parse prospect data for ingestion into Salesforce, SugarCRM, and Pipedrive.
+                </p>
+              </div>
+              <div class="mt-3.5">
+                <span class="tag-badge">Python</span>
+                <span class="tag-badge">Django</span>
+                <span class="tag-badge">Celery</span>
+                <span class="tag-badge">Salesforce API</span>
+                <span class="tag-badge">SugarCRM</span>
+              </div>
+            </div>
+
+            <!-- 8. FPT SOFTWARE -->
+            <div class="timeline-node pl-4 sm:pl-6">
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                <h4 class="text-xl font-semibold text-[var(--colour-text)] m-0">
+                  Software Development Engineer
+                </h4>
+                <time class="font-mono text-xs sm:text-sm text-[var(--colour-muted)] mt-1 sm:mt-0">
+                  Jul 2015 – Aug 2016
+                </time>
+              </div>
+              <div class="text-base font-medium text-[var(--colour-inactive)] mb-3">
+                FPT Software Philippines, Corp.
+              </div>
+              <div class="text-base leading-relaxed max-w-[var(--article-width)]">
+                <p>
+                  Contributed to pioneering enterprise pilot projects driven by FPT&rsquo;s Vietnam headquarters, including client engagements for KPMG and KNH.
+                </p>
+              </div>
+              <div class="mt-3.5">
+                <span class="tag-badge">Java</span>
+                <span class="tag-badge">Enterprise Integrations</span>
+                <span class="tag-badge">Software Engineering</span>
+              </div>
+            </div>
+
+            <!-- 9. EDUCATION -->
+            <div class="timeline-node pl-4 sm:pl-6">
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                <h4 class="text-xl font-semibold text-[var(--colour-text)] m-0">
+                  BS in Computer Science
+                </h4>
+                <time class="font-mono text-xs sm:text-sm text-[var(--colour-muted)] mt-1 sm:mt-0">
+                  Jun 2011 – Jun 2015
+                </time>
+              </div>
+              <div class="text-base font-medium text-[var(--colour-inactive)] mb-3">
+                University of the Philippines Cebu
+              </div>
+              <div class="text-base leading-relaxed max-w-[var(--article-width)]">
+                <p>
+                  Graduated with honors standing. College Scholar (Dean&rsquo;s Lister), AY 2014&ndash;2015, Second Semester.
+                  Foundational training in algorithms, systems programming, and distributed computing.
+                </p>
+              </div>
+              <div class="mt-3.5">
+                <span class="tag-badge">Dean's Lister</span>
+                <span class="tag-badge">Computer Science</span>
+                <span class="tag-badge">Distributed Systems</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ACTIVE CERTIFICATIONS & HISTORICAL CREDENTIALS -->
+        <section id="certifications" class="mt-16 pt-8 border-t border-[var(--colour-rule)]">
+          <h3 class="text-2xl sm:text-3xl font-normal text-[var(--colour-text)] mb-6">Certifications &amp; Credentials</h3>
+
+          <p class="mb-6 text-[var(--colour-muted)] max-w-[var(--article-width)]">
+            Continuous validation across cloud architecture, security, generative AI, container orchestration, and platform automation.
+          </p>
+
+          <div class="mb-8 overflow-x-auto">
+            <h4 class="text-lg font-semibold mb-3 text-[var(--colour-text)]">Active Credentials</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th>Certification</th>
+                  <th>Validity</th>
+                  <th>Credential ID</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>AWS Certified Generative AI Developer &ndash; Professional</strong> <span class="text-xs font-mono text-[var(--colour-muted)]">(Early Adopter)</span></td>
+                  <td>Apr 2026 &ndash; Apr 2029</td>
+                  <td class="font-mono text-xs text-[var(--colour-muted)]">Verified Active</td>
+                </tr>
+                <tr>
+                  <td><strong>AWS Certified Solutions Architect &ndash; Professional</strong></td>
+                  <td>Dec 2025 &ndash; Mar 2028</td>
+                  <td class="font-mono text-xs text-[var(--colour-muted)]">Verified Active</td>
+                </tr>
+                <tr>
+                  <td><strong>AWS Certified DevOps Engineer &ndash; Professional</strong></td>
+                  <td>Mar 2021 &ndash; Mar 2027</td>
+                  <td class="font-mono text-xs text-[var(--colour-muted)]">GV6MSL5JC2VE1FKF</td>
+                </tr>
+                <tr>
+                  <td><strong>AWS Certified Machine Learning &ndash; Associate</strong></td>
+                  <td>Mar 2026 &ndash; Apr 2029</td>
+                  <td class="font-mono text-xs text-[var(--colour-muted)]">Verified Active</td>
+                </tr>
+                <tr>
+                  <td><strong>AWS Certified Security &ndash; Specialty</strong></td>
+                  <td>Feb 2021 &ndash; Feb 2027</td>
+                  <td class="font-mono text-xs text-[var(--colour-muted)]">N388K9QJBB44QR96</td>
+                </tr>
+                <tr>
+                  <td><strong>AWS Certified SysOps Administrator &ndash; Associate</strong></td>
+                  <td>May 2019 &ndash; Mar 2027</td>
+                  <td class="font-mono text-xs text-[var(--colour-muted)]">TT4BK22KJNEE1W5H</td>
+                </tr>
+                <tr>
+                  <td><strong>AWS Certified Developer &ndash; Associate</strong></td>
+                  <td>Aug 2018 &ndash; Mar 2027</td>
+                  <td class="font-mono text-xs text-[var(--colour-muted)]">7GLJGGK1K24EQ8GV</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="overflow-x-auto">
+            <h4 class="text-lg font-semibold mb-3 text-[var(--colour-text)]">Prior Credentials (Historical)</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th>Credential</th>
+                  <th>Issuing Body</th>
+                  <th>Period / ID</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CKA: Certified Kubernetes Administrator</strong></td>
+                  <td>The Linux Foundation</td>
+                  <td class="font-mono text-xs text-[var(--colour-muted)]">Jun 2021 &ndash; Jun 2024 (LF-oel5bxwegr)</td>
+                </tr>
+                <tr>
+                  <td><strong>HashiCorp Certified: Terraform Associate</strong></td>
+                  <td>HashiCorp</td>
+                  <td class="font-mono text-xs text-[var(--colour-muted)]">Aug 2021 &ndash; Aug 2023</td>
+                </tr>
+                <tr>
+                  <td><strong>SnowPro Core Certification</strong></td>
+                  <td>Snowflake</td>
+                  <td class="font-mono text-xs text-[var(--colour-muted)]">Oct 2021 &ndash; Oct 2023</td>
+                </tr>
+                <tr>
+                  <td><strong>AWS Certified Data Analytics &ndash; Specialty</strong></td>
+                  <td>Amazon Web Services</td>
+                  <td class="font-mono text-xs text-[var(--colour-muted)]">Aug 2021 &ndash; Aug 2024 (5Z8Q730JB2QQ1TCH)</td>
+                </tr>
+                <tr>
+                  <td><strong>AWS Certified Database &ndash; Specialty</strong></td>
+                  <td>Amazon Web Services</td>
+                  <td class="font-mono text-xs text-[var(--colour-muted)]">Aug 2021 &ndash; Aug 2024 (EJ415N0LLFVQQCW0)</td>
+                </tr>
+                <tr>
+                  <td><strong>Microsoft Certified: Azure Administrator Associate</strong></td>
+                  <td>Microsoft</td>
+                  <td class="font-mono text-xs text-[var(--colour-muted)]">Jul 2020 &ndash; Jul 2022 (H459-8488)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- TECHNICAL TOOLKIT & SKILLS -->
+        <section id="stack" class="mt-16 pt-8 border-t border-[var(--colour-rule)]">
+          <h3 class="text-2xl sm:text-3xl font-normal text-[var(--colour-text)] mb-6">Technical Toolkit</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 max-w-[var(--article-width)]">
+            <div>
+              <h4 class="text-base font-semibold uppercase tracking-wider text-[var(--colour-muted)] mb-2 font-mono text-xs">Cloud &amp; Infrastructure</h4>
+              <p class="text-sm leading-relaxed">
+                AWS (EKS, Fargate, ECS, Lambda, IAM, VPC), Google Cloud Platform (GCP), Microsoft Azure, Terraform, CloudFormation, OpenTofu.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="text-base font-semibold uppercase tracking-wider text-[var(--colour-muted)] mb-2 font-mono text-xs">Containers &amp; Orchestration</h4>
+              <p class="text-sm leading-relaxed">
+                Kubernetes (EKS, air-gapped clusters), Docker, Helm, Karpenter, Istio, Gatekeeper / OPA, Argo Workflows, Argo CD.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="text-base font-semibold uppercase tracking-wider text-[var(--colour-muted)] mb-2 font-mono text-xs">Data Engineering &amp; Observability</h4>
+              <p class="text-sm leading-relaxed">
+                Apache Airflow (2.10 &rarr; 3.3, Git DAG Bundles), Prefect (v1 &amp; v2), dbt (Core/Cloud), Snowflake, OpenMetadata, Prometheus, Grafana, Elasticsearch, OpenSearch, Splunk, Dynatrace, AWS Glue, Metabase.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="text-base font-semibold uppercase tracking-wider text-[var(--colour-muted)] mb-2 font-mono text-xs">Languages &amp; Runtimes</h4>
+              <p class="text-sm leading-relaxed">
+                Python (Django, Flask, Celery, uv, pipenv), Golang, Java (Spring), TypeScript, Next.js, React, SQL, Shell / Bash.
+              </p>
+            </div>
+
+            <div class="md:col-span-2">
+              <h4 class="text-base font-semibold uppercase tracking-wider text-[var(--colour-muted)] mb-2 font-mono text-xs">CI/CD &amp; DevSecOps</h4>
+              <p class="text-sm leading-relaxed">
+                GitHub Actions, Jenkins, Azure DevOps, Ansible, CVE scanning &amp; remediation, Cert Manager, External Secrets Operator, TSCM controls, Well-Architected Framework.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-16 pt-8 border-t border-[var(--colour-rule)]">
+          <h3 class="text-2xl sm:text-3xl font-normal text-[var(--colour-text)] mb-6">Consulting &amp; Advisory</h3>
+          
+          <div class="space-y-4 max-w-[var(--article-width)]">
+            <p>
+              I take on targeted consulting and fractional advisory projects for organizations that need senior infrastructure ownership without agency overhead:
+            </p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li><em>FinOps &amp; Cloud Cost Reduction:</em> Architecture audits, unutilized resource pruning, ECS-to-Fargate revamps, and Karpenter autoscaling.</li>
+              <li><em>Orchestration Modernization:</em> Upgrading Airflow 2 to Airflow 3.3, Git DAG bundle multi-tenant architectures, and migrating Python data stacks to <code>uv</code>.</li>
+              <li><em>Kubernetes &amp; Air-Gapped Clusters:</em> Enterprise Helm deployments, Gatekeeper policy enforcement, and private VPC or Internet Gateway-less environments.</li>
+              <li><em>Observability Overhauls:</em> RTK v2, Prometheus metrics extraction, Grafana dashboards, and achieving OMA Level 2 maturity.</li>
+              <li><em>DevSecOps &amp; Compliance Hardening:</em> Automated CVE scanning, zero-trust secrets management, and incident response readiness.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="mt-12 max-w-[var(--article-width)]">
+          <h3 class="text-2xl sm:text-3xl font-normal text-[var(--colour-text)] mb-4">Full-time Roles</h3>
+          <p class="mb-4">
+            I am open to staff/principal DevOps, Solutions Architect, or founding infrastructure engineer roles where I can take hands-on ownership of the cloud roadmap, reliability, and data platform.
+          </p>
+          <p>
+            <em>Remote</em> is preferred. Based in Cebu City, Philippines (UTC+8), with deep experience collaborating across US, EMEA, and APAC timezones.
+          </p>
+        </section>
+
+        <!-- ELSEWHERE & CONTACT -->
+        <section id="contact" class="mt-16 pt-8 border-t border-[var(--colour-rule)]">
+          <h3 class="text-2xl sm:text-3xl font-normal text-[var(--colour-text)] mb-6">Elsewhere</h3>
+          
+          <ul class="list-disc pl-5 space-y-2 mb-8 max-w-[var(--article-width)]">
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/aldwyn101" target="_blank" rel="noopener">linkedin.com/in/aldwyn101</a></li>
+            <li>GitHub: <a href="https://github.com/aldwyn" target="_blank" rel="noopener">github.com/aldwyn</a></li>
+            <li>Email: <a href="mailto:aldwyn.up@gmail.com">aldwyn.up@gmail.com</a></li>
+            <li>Direct Phone: <span class="font-mono text-sm">+639993634131</span></li>
+            <li>Location: Cebu City, Philippines &bull; Available Worldwide (Remote)</li>
+          </ul>
+
+          <h3 class="text-2xl sm:text-3xl font-normal text-[var(--colour-text)] mb-4">Get in touch</h3>
+          <p class="max-w-[var(--article-width)]">
+            Write to <a href="mailto:aldwyn.up@gmail.com" class="font-semibold underline">aldwyn.up@gmail.com</a> for consulting inquiries, infrastructure architecture reviews, or full-time opportunities.
+          </p>
+          <p class="text-[var(--colour-muted)] mt-2">
+            I read everything and answer promptly.
+          </p>
+        </section>
+
+      </article>
+    </main>
+
+    <footer class="mt-20 pt-8 border-t border-[var(--colour-rule)] flex items-center justify-between text-xs text-[var(--colour-muted)]">
+      <p class="m-0">&copy; <span id="year">2026</span> Aldwyn Cabarrubias</p>
+      
+      <div class="flex items-center gap-3">
+        <button class="theme-toggle flex items-center gap-1.5" type="button" aria-label="Theme: auto (following system)" title="Theme: auto (following system)">
+          <span class="theme-icon inline-block"></span>
+          <span class="theme-label hidden sm:inline text-[0.7rem] font-mono uppercase tracking-wider">Theme</span>
+        </button>
+      </div>
+      <span class="sr-only" id="theme-status" aria-live="polite"></span>
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      var themes = ["auto", "light", "dark"];
+      var toggleBtn = document.querySelector(".theme-toggle");
+      var iconContainer = document.querySelector(".theme-icon");
+      var statusEl = document.getElementById("theme-status");
+      var descriptions = {
+        auto: "Auto theme, following system",
+        light: "Light theme",
+        dark: "Dark theme"
+      };
+      var mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      var icons = {
+        sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>',
+        moon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>',
+        auto: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>'
+      };
+
+      function resolveTheme(t) {
+        return t === "auto" ? (mediaQuery.matches ? "dark" : "light") : t;
+      }
+
+      function applyTheme(theme) {
+        document.documentElement.dataset.theme = theme;
+        var iconHtml = theme === "auto" ? icons.auto : (resolveTheme(theme) === "dark" ? icons.moon : icons.sun);
+        if (iconContainer) {
+          iconContainer.innerHTML = iconHtml;
+        } else if (toggleBtn) {
+          toggleBtn.innerHTML = iconHtml;
+        }
+        if (toggleBtn) {
+          toggleBtn.title = "Theme: " + theme + (theme === "auto" ? " (following system)" : "");
+          toggleBtn.setAttribute("aria-label", toggleBtn.title);
+        }
+      }
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", function () {
+          var current = localStorage.getItem("theme") || "auto";
+          var nextIndex = (themes.indexOf(current) + 1) % themes.length;
+          var nextTheme = themes[nextIndex];
+          localStorage.setItem("theme", nextTheme);
+          applyTheme(nextTheme);
+          if (statusEl) statusEl.textContent = descriptions[nextTheme];
         });
-    </script>
+      }
+
+      mediaQuery.addEventListener("change", function () {
+        if ((localStorage.getItem("theme") || "auto") === "auto") {
+          applyTheme("auto");
+        }
+      });
+
+      applyTheme(localStorage.getItem("theme") || "auto");
+    })();
+
+    // Year update
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
-
-<style type="text/css">
-body {
-    background: url(/background.jpg) center / cover;
-}
-#main {
-    position: relative;
-    margin-top: 150px;
-    text-align: center;
-}
-.author {
-    font-family: 'Patua One';
-    font-size: 4em;
-}
-.author-subheader {
-    font-family: 'Fjalla One';
-    font-size: 2em;
-}
-#contact-links {
-    font-size: 3em;
-}
-#contact-links a {
-    color: #333;
-}
-#avatar {
-    border-radius: 100%;
-    border-width: medium;
-    border-style: dashed;
-    box-shadow: 0px 0px 10px #000;
-    width: 200px;
-}
-</style>
-<style type="text/css">
-.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-}
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-</style>
-
 </html>
